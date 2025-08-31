@@ -6,7 +6,8 @@
 static void delay(void)
 {
  uint32t_t i = 0;
- for ( i=0; i<=DELAYCOUNT; i++)
+ for ( i=0; i<=DELAYCOUNT; i++);
+}
 int main(void)
 {
  SET_BIT(RCC->AHB1ENR,RCC_AHB1ENR_GPIOCEN);
@@ -18,4 +19,5 @@ GPIOC->BSRR|= GPIO_BSSR_BS13;
 GPIOC->BSSR |=GPIO_BSSR_BS13;
  delay();
  }
+
 }
